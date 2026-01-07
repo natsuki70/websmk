@@ -1,2 +1,10 @@
-<?php
-require __DIR__ . '/../public/index.php';
+{
+  "version": 2,
+  "framework": null,
+  "functions": {
+    "api/*.php": { "runtime": "vercel-php@0.7.1" }
+  },
+  "routes": [
+    { "src": "/(.*)", "dest": "/websmk/index.php" }
+  ]
+}
