@@ -1,0 +1,25 @@
+{
+    "version": 2,
+    "framework": null,
+    "functions": {
+        "api/*.php": {
+            "runtime": "vercel-php@0.7.1"
+        }
+    },
+    "installCommand": "composer install",
+    "buildCommand": "npm install && npm run build",
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/api/index.php"
+        }
+    ],
+    "env": {
+        "APP_ENV": "production",
+        "APP_DEBUG": "true",
+        "LOG_CHANNEL": "stderr",
+        "VIEW_COMPILED_PATH": "/tmp/storage/framework/views",
+        "SESSION_DRIVER": "cookie",
+        "CACHE_DRIVER": "array"
+    }
+}
